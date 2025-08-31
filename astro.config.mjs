@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
+// Configure for GitHub Pages project site: https://smart-programmer.github.io/istaqrar-home/
 export default defineConfig({
   integrations: [
     tailwind({
@@ -9,5 +10,6 @@ export default defineConfig({
       },
     }),
   ],
-  site: 'https://www.istaqrar.sa',
+  site: 'https://smart-programmer.github.io',
+  base: '/istaqrar-home',
 });

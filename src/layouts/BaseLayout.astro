@@ -8,7 +8,7 @@ const { title = 'استقرار الجودة', description = 'نرتقي معً�
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
   </head>
   <body>
     <slot />
