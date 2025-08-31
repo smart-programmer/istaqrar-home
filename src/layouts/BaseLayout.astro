@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+const { title = 'استقرار الجودة', description = 'نرتقي معًا بمعايير الجودة' } = Astro.props;
+---
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <slot />
+    <script type="module">
+      // Ensure content remains visible; toggle class for AOS-ready state
+      const ready = () => document.documentElement.classList.add('aos-enabled');
+      window.addEventListener('load', async () => {
+        try {
+          const { default: AOS } = await import('aos');
+          ready();
+          AOS.init({ duration: 700, once: true, easing: 'ease-out' });
+          // Ensure elements in viewport are revealed immediately
+          requestAnimationFrame(() => {
+            try { AOS.refreshHard(); } catch {}
+            document.querySelectorAll('[data-aos]').forEach((el) => {
+              (el as HTMLElement).classList.add('aos-animate');
+            });
+          });
+        } catch (e) {
+          // Even if AOS fails, ensure content is visible
+          ready();
+          console.warn('AOS failed to load:', e);
+        }
+      });
+    </script>
+  </body>
+</html>

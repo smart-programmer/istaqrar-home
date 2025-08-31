@@ -1,0 +1,29 @@
+@import 'aos/dist/aos.css';
+@import '@fontsource/tajawal/400.css';
+@import '@fontsource/tajawal/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  direction: rtl;
+}
+
+body {
+  @apply font-tajawal text-gray-800 bg-white;
+}
+
+/* Fallback: keep content visible if AOS hasn't initialized */
+html:not(.aos-enabled) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-primary-800 mb-6;
+}
+
+.section-subtitle {
+  @apply text-gray-600 max-w-2xl;
+}
