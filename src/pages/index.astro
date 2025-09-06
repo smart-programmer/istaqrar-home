@@ -1,32 +1,39 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="استقرار الجودة" description="نرتقي معًا بمعايير الجودة">
+<BaseLayout title="استقرار الجودة" description="شريكك الموثوق في رحلة الجودة والتميز.">
   <main>
     <!-- Hero -->
     <section class="relative overflow-hidden bg-gradient-to-b from-primary-900 via-primary-800 to-primary-700 text-white">
       <div class="absolute inset-0 opacity-20">
         <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 320"><path fill="#0ea5a6" fill-opacity="0.2" d="M0,64L48,85.3C96,107,192,149,288,154.7C384,160,480,128,576,106.7C672,85,768,75,864,96C960,117,1056,171,1152,181.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
       </div>
+      <!-- Hero Logo placed on the left -->
+      <div class="absolute left-4 md:left-8 top-6">
+        <img src="/logo.jpeg" alt="مؤسسة استقرار الجودة" class="h-12 md:h-16 w-auto" loading="eager" decoding="async" />
+      </div>
       <div class="container relative py-24 md:py-32">
         <div class="max-w-3xl" data-aos="fade-up">
           <h1 class="text-4xl md:text-6xl font-extrabold mb-4">استقرار الجودة</h1>
-          <p class="text-xl md:text-2xl text-teal-200 mb-6">نرتقي معًا بمعايير الجودة</p>
-          <p class="text-white/90 mb-8">✨ مرحبًا بكم في استقرار الجودة. نحن جهة متخصصة في تقييم، مراقبة، وتحسين الجودة داخل المنشآت والشركات. نعمل على تقديم حلول عملية مبنية على معايير عالمية لضمان استقرار الأداء ورفع كفاءة العمليات.</p>
+          <p class="text-xl md:text-2xl text-teal-200 mb-6">شريكك الموثوق في رحلة الجودة والتميز.</p>
+          <p class="text-white/90 mb-4">مرحباً بكم في مؤسسة استقرار الجودة</p>
+          <p class="text-white/90 mb-8">في عالم يتسارع فيه التغيير، تظل الجودة والثقة هي أساس نجاح أي عمل تجاري. نحن شريككم المتخصص في قطاع المطاعم والمقاهي، نساعدكم على تحقيق أعلى معايير سلامة الأغذية والامتثال للوائح المحلية والعالمية. معنا، يصبح تحقيق الجودة رحلة سهلة ومثمرة، تضمن لكم راحة البال، وتحمي استثماركم، وتعزز من سمعتكم في السوق.</p>
           <a href="#contact" class="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg shadow-lg transition">
-            <span>اطلب زيارتك الآن</span>
+            <span>اطلب زيارتك المجانية الان</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
           </a>
         </div>
       </div>
     </section>
 
+    
+
     <!-- About -->
     <section class="container py-16 md:py-20">
       <div class="grid md:grid-cols-3 gap-8 items-center">
         <div class="md:col-span-2" data-aos="fade-up">
           <h2 class="section-title">من نحن</h2>
-          <p class="section-subtitle">نحن جهة متخصصة في تقييم، مراقبة، وتحسين الجودة داخل المنشآت والشركات. نقدم حلولًا عملية مبنية على معايير عالمية لضمان استقرار الأداء ورفع كفاءة العمليات.</p>
+          <p class="section-subtitle">‎نحن مؤسسة استقرار الجودة  شريكك الموثوق في رحلة الجودة والتميز. تأسست مؤسستنا على إيمان راسخ بأن جودة الأغذية وسلامتها ليست مجرد متطلبات قانونية، بل هي أساس نجاح أي منشأة غذائية وحماية لسمعتها وثقة عملائها.</p>
         </div>
         <div class="flex justify-center md:justify-end" data-aos="fade-left">
           <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-teal-500 to-primary-600 grid place-items-center shadow-lg">
@@ -36,78 +43,107 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="bg-gray-50 py-16 md:py-20">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">خدماتنا</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { title: 'الزيارات الميدانية', desc: 'تقييم شامل للعمليات والخدمات وفق أكثر من 70 مؤشر جودة.', icon: '<path d="M9 12l2 2 4-4"/>' },
-            { title: 'التقارير التفصيلية', desc: 'تقارير دقيقة تتضمن نقاط القوة والملاحظات والتوصيات.', icon: '<path d="M9 17v-6h6v6M9 7h6"/>' },
-            { title: 'الاستشارات', desc: 'حلول عملية لتحسين الجودة والامتثال للمعايير.', icon: '<path d="M12 6v6l4 2"/>' },
-            { title: 'الباقات المرنة', desc: 'زيارات مجانية تجريبية + باقات شهرية وسنوية.', icon: '<path d="M4 7h16M4 12h16M4 17h16"/>' },
-          ].map((s) => (
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100" data-aos="fade-up">
-              <div class="w-12 h-12 rounded-lg bg-teal-100 text-teal-700 grid place-items-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={s.icon}></svg>
-              </div>
-              <h3 class="font-bold text-lg mb-2">{s.title}</h3>
-              <p class="text-gray-600 text-sm">{s.desc}</p>
-            </div>
-          ))}
+    <!-- Goal -->
+    <section class="container py-8 md:py-12">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2" data-aos="fade-up">
+          <h2 class="section-title">هدفنا</h2>
+          <p class="section-subtitle">‎ هو تمكين المطاعم والمقاهي من تحقيق أعلى معايير الجودة التشغيلية، وضمان الامتثال الكامل لمتطلبات معايير iso و المعايير المحلية ، مع التركيز على التحسين المستمر لتقديم تجربة استثنائية للعملاء.</p>
         </div>
       </div>
     </section>
 
-    <!-- Why Us -->
-    <section class="container py-16 md:py-20">
-      <h2 class="section-title" data-aos="fade-up">لماذا استقرار الجودة؟</h2>
-      <ul class="grid sm:grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="100">
-        {[
-          'خبرة ومعايير عالمية',
-          'تقارير مفصلة وسهلة الفهم',
-          'شفافية وحيادية كاملة',
-          'دعم مستمر للشركات بعد الزيارة',
-        ].map((i) => (
-          <li class="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm">
-            <span class="text-green-600">✅</span>
-            <span class="text-gray-700">{i}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    <!-- How It Works -->
-    <section class="bg-gray-50 py-16 md:py-20">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">آلية عملنا</h2>
-        <div class="grid md:grid-cols-4 gap-6">
-          {[
-            { n: 1, t: 'حجز الزيارة عبر الموقع أو التواصل معنا.' },
-            { n: 2, t: 'الزيارة الميدانية وتنفيذ التقييم الشامل.' },
-            { n: 3, t: 'إصدار التقرير (ملخص + تقرير تفصيلي بالصور والجداول).' },
-            { n: 4, t: 'جلسة متابعة لشرح الملاحظات والتوصيات.' },
-          ].map((step, idx) => (
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay={idx * 100}>
-              <div class="w-10 h-10 rounded-full bg-primary-600 text-white grid place-items-center mb-3">{step.n}</div>
-              <p class="text-gray-700 text-sm">{step.t}</p>
-            </div>
-          ))}
+    <!-- Vision -->
+    <section class="container py-8 md:py-12">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2" data-aos="fade-up">
+          <h2 class="section-title">رؤيتنا</h2>
+          <p class="section-subtitle">‎أن نكون القوة الدافعة وراء ثقة المستهلك في جودة وسلامة جميع المطاعم والمقاهي في المملكة، وأن تصبح معاييرنا هي المعيار الذهبي للتميز التشغيلي في القطاع الغذائي.</p>
         </div>
       </div>
     </section>
+
+    <!-- What We Offer -->
+    <section class="container py-8 md:py-12">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2" data-aos="fade-up">
+          <h2 class="section-title">ماذا نقدم؟</h2>
+          <p class="section-subtitle mb-4">‎نقدم لك فريقاً من الخبراء في المعايير العاليمة و المحلية  يعمل كمدقق جودة خاص بك، يقوم بزيارات دورية ومتابعة شاملة لجميع جوانب منشأتك:</p>
+          <ul class="space-y-3">
+            <li class="bg-white rounded-lg p-4 shadow-sm border border-gray-100"><span class="font-semibold">• تقييم شامل:</span> نقدم تقارير مفصلة ودقيقة عن النظافة، سلامة الأغذية، وكفاءة العمليات.</li>
+            <li class="bg-white rounded-lg p-4 shadow-sm border border-gray-100"><span class="font-semibold">• حلول عملية:</span> نقدم فرص تحسين قابلة للتطبيق، ونساعدك على تحويل الملاحظات إلى خطوات عمل فعّالة.</li>
+            <li class="bg-white rounded-lg p-4 shadow-sm border border-gray-100"><span class="font-semibold">• شراكة مستمرة:</span> نتابع معك تنفيذ خطط التحسين لضمان تحقيق النتائج المرجوة والحفاظ على أعلى مستويات الجودة بشكل دائم.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us (Best Choice) -->
+    <section class="container py-8 md:py-12">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2" data-aos="fade-up">
+          <h2 class="section-title">لماذا نحن خيارك الأفضل؟</h2>
+          <p class="section-subtitle mb-4">‎ما يميزنا هو أننا لا نكتفي بتقديم التقارير فقط. نحن نؤمن بالشراكة طويلة الأمد. فريقنا يعمل معك جنباً إلى جنب لتحويل التحديات إلى فرص، ونسعى دائمًا لأن نكون جزءًا من نجاحك من خلال:</p>
+          <ul class="space-y-3">
+            <li class="bg-white rounded-lg p-4 shadow-sm border border-gray-100"><span class="font-semibold">• الخبرة المتخصصة:</span> معرفة عميقة باللوائح المحلية والدولية.</li>
+            <li class="bg-white rounded-lg p-4 shadow-sm border border-gray-100"><span class="font-semibold">• النموذج المتكامل:</span> نقدم لك خدمات المتابعة والتطوير وقياس رضا العملاء في حزمة واحدة.</li>
+            <li class="bg-white rounded-lg p-4 shadow-sm border border-gray-100"><span class="font-semibold">• التركيز على القيمة:</span> هدفنا ليس مجرد التدقيق، بل مساعدة منشأتك على النمو وزيادة كفاءتها وتعزيز ثقة عملائها.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="container py-16 md:py-20">
+      <h2 class="section-title" data-aos="fade-up">الباقات</h2>
+      <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-gray-100 mt-6" data-aos="fade-up" data-aos-delay="100">
+        <table class="w-full text-right">
+          <thead class="bg-primary-600 text-white">
+            <tr>
+              <th class="py-3 px-4">الباقات</th>
+              <th class="py-3 px-4">التركيز</th>
+              <th class="py-3 px-4">السعر</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y">
+            <tr class="hover:bg-gray-50">
+              <td class="py-4 px-4 font-semibold">زيارة مجانية</td>
+              <td class="py-4 px-4">تعريف عن الخدمة</td>
+              <td class="py-4 px-4">مجانا</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-4 px-4 font-semibold">باقة الامتثال (البرونزية)</td>
+              <td class="py-4 px-4">تركز على ضمان الامتثال الأساسي</td>
+              <td class="py-4 px-4">2300 ريال</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-4 px-4 font-semibold">باقة التحسين (الفضية)</td>
+              <td class="py-4 px-4">تركز على تطوير الأداء</td>
+              <td class="py-4 px-4">4000 ريال</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="py-4 px-4 font-semibold">باقة التميز (الذهبية)</td>
+              <td class="py-4 px-4">تركز على الشراكة الكاملة لضمان أعلى مستوى من الجودة</td>
+              <td class="py-4 px-4">6000 ريال</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    
 
     <!-- Contact -->
     <section id="contact" class="container py-16 md:py-20">
       <h2 class="section-title" data-aos="fade-up">تواصل معنا</h2>
       <div class="grid sm:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
-        <a href="tel:+" class="group flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:border-teal-500">
+        <a href="tel:+966593283732" class="group flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:border-teal-500">
           <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-700 grid place-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.81-1.15a2 2 0 0 1 2.11-.45c.76.24 1.55.42 2.36.54A2 2 0 0 1 22 16.92z"/></svg>
           </div>
           <div>
             <div class="font-semibold">الهاتف</div>
-            <div class="text-gray-600 text-sm">+</div>
+            <div class="text-gray-600 text-sm">+966593283732</div>
           </div>
         </a>
         <a href="mailto:info@istaqrar.sa" class="group flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:border-teal-500">
