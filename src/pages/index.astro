@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const logoPath = `${base}${base.endsWith('/') ? '' : '/'}logo.jpeg`;
 ---
 <BaseLayout title="استقرار الجودة" description="شريكك الموثوق في رحلة الجودة والتميز.">
   <main>
@@ -10,7 +12,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <!-- Hero Logo placed on the left -->
       <div class="absolute left-4 md:left-8 top-6">
-        <img src="/logo.jpeg" alt="مؤسسة استقرار الجودة" class="h-12 md:h-16 w-auto" loading="eager" decoding="async" />
+        <img src={logoPath} alt="مؤسسة استقرار الجودة" class="h-12 md:h-16 w-auto" loading="eager" decoding="async" />
       </div>
       <div class="container relative py-24 md:py-32">
         <div class="max-w-3xl" data-aos="fade-up">
