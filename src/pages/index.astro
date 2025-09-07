@@ -12,7 +12,9 @@ const logoPath = `${base}${base.endsWith('/') ? '' : '/'}logo.svg`;
       </div>
       <!-- Hero Logo placed on the left -->
       <div class="absolute left-4 md:left-8 top-6">
-        <img src={logoPath} alt="مؤسسة استقرار الجودة" class="h-[4.2rem] md:h-[5.6rem] w-auto" loading="eager" decoding="async" />
+        <div class="bg-white/95 md:bg-white rounded-xl shadow-lg ring-1 ring-black/5 px-2.5 py-2 md:px-3 md:py-2.5 inline-block" aria-label="شعار المؤسسة">
+          <img src={logoPath} alt="مؤسسة استقرار الجودة" class="h-[4.2rem] md:h-[5.6rem] w-auto" loading="eager" decoding="async" />
+        </div>
       </div>
       <div class="container relative py-24 md:py-32">
         <div class="max-w-3xl" data-aos="fade-up">
