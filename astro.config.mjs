@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   integrations: [
@@ -8,8 +9,9 @@ export default defineConfig({
         applyBaseStyles: true,
       },
     }),
+    sitemap(),
   ],
-  // Netlify deployment: serve from site root
-  site: 'https://spectacular-maamoul-9b4d2d.netlify.app',
+  // Production site URL for canonical links & sitemap
+  site: 'https://istaqrar.sa',
   base: '/',
 });
