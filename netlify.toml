@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Redirect root to the app path
+[[redirects]]
+  from = "/"
+  to = "/istaqrar-home/"
+  status = 301
+  force = true
+
+# Normalize missing trailing slash
+[[redirects]]
+  from = "/istaqrar-home"
+  to = "/istaqrar-home/"
+  status = 301
+  force = true
+
+# Serve the SPA from the built root index for any /istaqrar-home/* path
+[[redirects]]
+  from = "/istaqrar-home/*"
+  to = "/index.html"
+  status = 200
