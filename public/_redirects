@@ -1,0 +1,9 @@
+# Redirect root to /istaqrar-home/
+/   /istaqrar-home/ 301
+
+# Normalize /istaqrar-home (no trailing slash)
+/istaqrar-home   /istaqrar-home/ 301
+
+# Serve the root index.html for all routes under /istaqrar-home/
+# This lets the site be reachable at /istaqrar-home/ without moving files
+/istaqrar-home/*   /index.html   200
