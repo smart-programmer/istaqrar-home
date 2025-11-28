@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import cert1 from '../../cert7.png';
 import cert2 from '../../cert8.png';
 import cert3 from '../../cert6.png';
-const base = import.meta.env.BASE_URL;
-const logoPath = `${base}${base.endsWith('/') ? '' : '/'}logo-istaqrar2.jpeg`;
+import logoIstaqrar from '../../logo-istaqrar2.jpeg';
+const logoPath = logoIstaqrar.src;
 ---
 <BaseLayout title="استقرار الجودة" description="شريكك الموثوق في رحلة الجودة والتميز.">
   <main>
